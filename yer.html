@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMO ve Tarım Kredi Satış Noktaları</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>TMO ve Tarım Kredi Satış Noktaları</h1>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Harita oluşturma
+        var map = L.map('map').setView([39.92077, 32.85411], 6); // Türkiye'nin ortasında başlat
+
+        // OpenStreetMap tile katmanını ekleme
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // TMO satış noktaları (Koordinatlar ve bilgiler)
+        var tmoNoktalar = [
+            { "name": "TMO Ankara", "lat": 39.92077, "lng": 32.85411, "info": "Buğday, arpa satış noktası." },
+            { "name": "TMO İstanbul", "lat": 41.0082, "lng": 28.9784, "info": "Çeşitli tarım ürünleri." },
+            { "name": "TMO İzmir", "lat": 38.4237, "lng": 27.1428, "info": "Buğday, mısır, arpa satış noktası." },
+            { "name": "TMO Antalya", "lat": 36.8969, "lng": 30.7133, "info": "Çeşitli ürünler ve satış noktaları." },
+            { "name": "TMO Adana", "lat": 37.0, "lng": 35.3213, "info": "Tarım ürünleri satış noktası." },
+            { "name": "TMO Bursa", "lat": 40.195, "lng": 29.0601, "info": "Buğday, arpa ve yem." },
+            { "name": "TMO Konya", "lat": 37.866, "lng": 32.4846, "info": "Tahıl ve tarım ürünleri." },
+            { "name": "TMO Kayseri", "lat": 38.721, "lng": 35.4901, "info": "Tahıl, un ve diğer ürünler." }
+            // Diğer iller eklenebilir
+        ];
+
+        // Tarım Kredi satış noktaları (Koordinatlar ve bilgiler)
+        var tarimKrediNoktalar = [
+            { "name": "Tarım Kredi Antalya", "lat": 36.8969, "lng": 30.7133, "info": "Gübre ve yem satış noktası." },
+            { "name": "Tarım Kredi Adana", "lat": 37.0, "lng": 35.3213, "info": "Kredilendirme ve destek hizmetleri." },
+            { "name": "Tarım Kredi İstanbul", "lat": 41.0082, "lng": 28.9784, "info": "Gübre, yem ve tarım desteği." },
+            { "name": "Tarım Kredi İzmir", "lat": 38.4237, "lng": 27.1428, "info": "Tarım kredi destekleri ve gübre." },
+            { "name": "Tarım Kredi Konya", "lat": 37.866, "lng": 32.4846, "info": "Kredilendirme ve destek ürünleri." },
+            { "name": "Tarım Kredi Bursa", "lat": 40.195, "lng": 29.0601, "info": "Çeşitli tarım ürünleri ve krediler." },
+            { "name": "Tarım Kredi Kayseri", "lat": 38.721, "lng": 35.4901, "info": "Tarım kredisi, yem ve gübre." }
+            // Diğer iller eklenebilir
+        ];
+
+        // TMO noktalarını haritada gösterme
+        tmoNoktalar.forEach(function(nokta) {
+            var marker = L.marker([nokta.lat, nokta.lng]).addTo(map);
+            marker.bindPopup("<b>" + nokta.name + "</b><br>" + nokta.info);
+        });
+
+        // Tarım Kredi noktalarını haritada gösterme
+        tarimKrediNoktalar.forEach(function(nokta) {
+            var marker = L.marker([nokta.lat, nokta.lng]).addTo(map);
+            marker.bindPopup("<b>" + nokta.name + "</b><br>" + nokta.info);
+        });
+    </script>
+
+</body>
+</html>

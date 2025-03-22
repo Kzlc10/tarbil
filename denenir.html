@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarım AI</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header stiliniz */
+        header {
+            background-image: url("123tarla.jpg"); /* Arka plan resmi */
+            background-size: cover; /* Resmi kapsayacak şekilde ayarla */
+            background-position: center; /* Resmi ortala */
+            color: #000000;
+            padding: 2rem 4rem; /* Padding artırıldı */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 250px; /* Yüksekliği artır */
+        }
+
+        /* Nav linkleri stil */
+        nav a {  
+            color: rgb(13, 12, 12);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.8rem; /* Yazı boyutunu büyüttük */
+        }
+
+        nav a:hover {
+            color: #ffffff; /* Hoverda renk değişikliği */
+        }
+
+        /* Banner stil */
+        .banner {
+            display: flex;
+            justify-content: space-around;
+            padding: 2rem 1rem;
+            background: #f4f4f4;
+        }
+
+        .banner div {
+            text-align: center;
+            background: #fff;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .banner img {
+            width: 80px;
+            height: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        /* News ve Video stil */
+        .news, .videos {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .news article, .videos article {
+            flex: 1 1 calc(25% - 2rem);
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .news img, .videos iframe {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Footer stil */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div>
+            <h1>Tarım AI</h1>
+        </div>
+        <nav>
+            <a href="#">Kurumsal</a>
+            <a href="#">Ürünler</a>
+            <a href="#">Hizmetler</a>
+            <a href="#">Sürdürülebilirlik</a>
+            <a href="#">İletişim</a>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div>
+            <img src="https://via.placeholder.com/80" alt="yatirim">
+            <h3>Ürünüm Ne Kadar Eder</h3>
+        </div>
+        <div>
+            <img src="https://via.placeholder.com/80" alt="surdurulebilirlik">
+            <h3>Ürün Satış Noktaları</h3>
+        </div>
+        <div>
+            <img src="https://via.placeholder.com/80" alt="medya">
+            <h3>TARBİL</h3>
+        </div>
+        <div>
+            <img src="https://via.placeholder.com/80" alt="bize_ulasin">
+            <h3>Çiftçi Kayıt Sistemi</h3>
+        </div>
+    </section>
+
+    <!-- Haberler -->
+    <h2>Tarım Haberleri</h2>
+    <section class="news">
+        <article>
+            <img src="https://via.placeholder.com/300x150" alt="haber1">
+            <p>Tarım 2025 bütçesinde 135 milyon TL destek</p>
+        </article>
+        <article>
+            <img src="https://via.placeholder.com/300x150" alt="haber2">
+            <p>Zeytinyağında rekor üretim</p>
+        </article>
+        <article>
+            <img src="https://via.placeholder.com/300x150" alt="haber3">
+            <p>Tarlada çiftçi maliyetlerini düşürecek öneriler</p>
+        </article>
+        <article>
+            <img src="https://via.placeholder.com/300x150" alt="haber4">
+            <p>İklim değişikliği tarımı nasıl etkiliyor?</p>
+        </article>
+    </section>
+
+    <!-- Videolar -->
+    <h2>Tarımsal Konular</h2>
+    <section class="videos">
+        <article>
+            <iframe src="https://www.youtube.com/embed/xyz" frameborder="0" allowfullscreen></iframe>
+            <p>GDO'lu Mısır Skandalı</p>
+        </article>
+        <article>
+            <iframe src="https://www.youtube.com/embed/abc" frameborder="0" allowfullscreen></iframe>
+            <p>Dışarıya Bilge Genç Çiftçiler</p>
+        </article>
+        <article>
+            <iframe src="https://www.youtube.com/embed/uvw" frameborder="0" allowfullscreen></iframe>
+            <p>Çiftçiye Uygun Destekler</p>
+        </article>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Tarım Portalı. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>
